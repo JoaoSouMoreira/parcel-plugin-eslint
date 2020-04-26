@@ -1,0 +1,14 @@
+{
+  "name": "parcel-plugin-eslint",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^6.8.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
