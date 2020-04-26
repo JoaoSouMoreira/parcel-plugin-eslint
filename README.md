@@ -13,5 +13,33 @@ npm i @joaosomoreira/parcel-plugin-eslint -D
 yarn add @joaosomoreira/parcel-plugin-eslint -D
 ```
 
+## Config
+This plugin has a default configuration set as:
+```json
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "ignorePatterns": ["node_modules/"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  }
+}
+```
+
+It will also pick up any eslint configuration files in your project and resolve them along with the default above.
+
 ## Issues
 Feel free to open any issues for problems or suggestions you find. Even better if you have a PR for these, all PRs will be reviewed.
