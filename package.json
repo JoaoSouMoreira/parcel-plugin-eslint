@@ -1,6 +1,6 @@
 {
   "name": "@joaosomoreira/parcel-plugin-eslint",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "license": "MIT",
   "peerDependencies": {
