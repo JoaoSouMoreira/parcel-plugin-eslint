@@ -1,22 +1,12 @@
 const fs = require('fs');
 const JSAsset = require('parcel-bundler/src/assets/JSAsset');
 const { CLIEngine } = require('eslint');
-const { buildMessage, grabErrors } = './utils';
+const { buildMessage, grabErrors } = require('./utils');
 
 class ESLintAsset extends JSAsset {
   constructor(name, pkg, options) {
     super(name, pkg, options);
     this.type = 'js';
-  }
-
-  parseMessage(message) {
-    let severity = '';
-    if (message.fatal) {
-      severity = 'error';
-    } else {
-      severity = message.severity === 2 ? 'error' : 'warning';
-    }
-    return `\n\n${message.line}:${message.column} ${severity} ${message.message} ${message.ruleId}`;
   }
 
   async load() {

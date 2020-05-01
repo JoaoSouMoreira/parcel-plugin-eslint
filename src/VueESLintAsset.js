@@ -1,7 +1,7 @@
 const fs = require('fs');
 const VueAsset = require('parcel-bundler/src/assets/VueAsset');
 const { CLIEngine } = require('eslint');
-const { buildMessage, grabErrors } = './utils';
+const { buildMessage, grabErrors } = require('./utils');
 
 class VueESLintAsset extends VueAsset {
   constructor(name, pkg, options) {
