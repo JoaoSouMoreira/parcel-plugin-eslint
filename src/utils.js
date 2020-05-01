@@ -1,4 +1,4 @@
-export const buildMessage = (message) => {
+exports.buildMessage = (message) => {
   let severity = '';
   if (message.fatal) {
     severity = 'error';
@@ -8,7 +8,7 @@ export const buildMessage = (message) => {
   return `\n\n${message.line}:${message.column} ${severity} ${message.message} ${message.ruleId}`;
 }
 
-export const grabErrors = (results) => {
+exports.grabErrors = (results) => {
   const fatalErrors = [];
   const warnings = [];
 
