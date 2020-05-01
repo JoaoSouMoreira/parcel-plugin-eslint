@@ -1,22 +1,12 @@
 const fs = require('fs');
-const JSAsset = require('parcel-bundler/src/assets/JSAsset');
+const VueAsset = require('parcel-bundler/src/assets/VueAsset');
 const { CLIEngine } = require('eslint');
 const { buildMessage, grabErrors } = './utils';
 
-class ESLintAsset extends JSAsset {
+class VueESLintAsset extends VueAsset {
   constructor(name, pkg, options) {
     super(name, pkg, options);
-    this.type = 'js';
-  }
-
-  parseMessage(message) {
-    let severity = '';
-    if (message.fatal) {
-      severity = 'error';
-    } else {
-      severity = message.severity === 2 ? 'error' : 'warning';
-    }
-    return `\n\n${message.line}:${message.column} ${severity} ${message.message} ${message.ruleId}`;
+    this.type = 'vue';
   }
 
   async load() {
@@ -41,4 +31,4 @@ class ESLintAsset extends JSAsset {
   }
 }
 
-module.exports = ESLintAsset;
+module.exports = VueESLintAsset;
