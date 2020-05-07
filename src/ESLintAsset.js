@@ -24,7 +24,7 @@ class ESLintAsset extends JSAsset {
     warnings.forEach(warning => console.warn(buildMessage(warning)));
 
     if (fatalErrors.length > 0) {
-      const errorList = fatalErrors.reduce((acc, error) => `${acc}${this.parseMessage(error)}`, '');
+      const errorList = fatalErrors.reduce((acc, error) => `${acc}${buildMessage(error)}`, '');
       throw new Error(`\nFailed to compile\n${errorList}`)
     }
     return code;
