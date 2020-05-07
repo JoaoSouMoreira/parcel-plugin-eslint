@@ -1,8 +1,12 @@
 {
   "name": "@joaosomoreira/parcel-plugin-eslint",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoaoSouMoreira/parcel-plugin-eslint.git"
+  },
   "scripts": {
     "postinstall": "rm ../../parcel-bundler/src/.eslintrc.json && rm ../../parcel-bundler/src/builtins/.eslintrc.json"
   },
